@@ -11,11 +11,17 @@ class TestesAppApplicationTests {
 
 	@Test
 	void deveCalcularMediaCorretamente01() {
-		double nota1 = 5.0;
-		double nota2 = 6.0;
-		double nota3 = 7.0;
+		//cenário		
+		Nota nota = new Nota();
+		nota.setNota1(5.0);
+		nota.setNota2(6.0);
+		nota.setNota3(7.0);
 		
-		Assertions.assertEquals(6.3, Nota.calculaMedia(nota1, nota2, nota3));
+		//ação
+		double media = nota.calculaMedia();
+		
+		//validação
+		Assertions.assertEquals(6.3, nota.calculaMedia());
 		
 	}
 
