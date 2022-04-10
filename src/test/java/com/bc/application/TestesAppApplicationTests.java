@@ -60,10 +60,10 @@ class TestesAppApplicationTests {
 
 	@Test
 	void deveCriarNotaComSucesso() {
-		//cenário
+		// cenário
 		Nota nota = new Nota();
-		
-		// ação		
+
+		// ação
 		nota.setNota1(5.0);
 		nota.setNota2(6.0);
 		nota.setNota3(7.0);
@@ -71,6 +71,22 @@ class TestesAppApplicationTests {
 		// validação
 		Assertions.assertNotNull(nota);
 
-	}	
+	}
+
+	@Test
+	void deveCriarNotaPositiva() {
+		// cenário
+		Nota nota = new Nota();
+
+		// ação
+		nota.setNota1(5.0);
+		nota.setNota2(6.0);
+		nota.setNota3(7.0);
+
+		// validação
+		assertThat(nota.nota1, greaterThan(-1.0));
+		assertThat(nota.nota2, greaterThan(-1.0));
+		assertThat(nota.nota3, greaterThan(-1.0));
+	}
 
 }
