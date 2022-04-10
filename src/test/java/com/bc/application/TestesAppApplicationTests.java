@@ -3,6 +3,8 @@ package com.bc.application;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.greaterThan;
 
+import static org.hamcrest.Matchers.*;
+
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -84,9 +86,9 @@ class TestesAppApplicationTests {
 		nota.setNota3(7.0);
 
 		// validação
-		assertThat(nota.nota1, greaterThan(-1.0));
-		assertThat(nota.nota2, greaterThan(-1.0));
-		assertThat(nota.nota3, greaterThan(-1.0));
+		assertThat(nota.nota1, greaterThanOrEqualTo(0.0));
+		assertThat(nota.nota2, greaterThanOrEqualTo(0.0));
+		assertThat(nota.nota3, greaterThanOrEqualTo(0.0));
 	}
 
 }
