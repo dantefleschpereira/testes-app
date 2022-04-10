@@ -1,5 +1,8 @@
 package com.bc.application;
 
+import static org.assertj.core.api.Assertions.assertThat;
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.Matchers.*;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -57,8 +60,10 @@ class TestesAppApplicationTests {
 
 	@Test
 	void deveCriarNotaComSucesso() {
-		// ação
+		//cenário
 		Nota nota = new Nota();
+		
+		// ação		
 		nota.setNota1(5.0);
 		nota.setNota2(6.0);
 		nota.setNota3(7.0);
@@ -66,5 +71,6 @@ class TestesAppApplicationTests {
 		// validação
 		Assertions.assertNotNull(nota);
 
-	}
+	}	
+
 }
