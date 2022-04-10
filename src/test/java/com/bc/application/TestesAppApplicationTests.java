@@ -39,4 +39,19 @@ class TestesAppApplicationTests {
 		//validação
 		Assertions.assertEquals(9.0, nota.calculaMedia());
 	}
+
+	@Test
+	void deveCalcularMediaCorretamente03() {
+		//cenário		
+		Nota nota = new Nota();
+		nota.setNota1(10.0);
+		nota.setNota2(10.0);
+		nota.setNota3(5.0);
+				
+		//ação
+		double media = nota.calculaMedia();
+				
+		//validação
+		Assertions.assertEquals(7.5, nota.calculaMedia());
+	}
 }
