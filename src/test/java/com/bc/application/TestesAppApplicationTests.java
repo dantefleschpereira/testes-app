@@ -91,4 +91,20 @@ class TestesAppApplicationTests {
 		assertThat(nota.nota3, greaterThanOrEqualTo(0.0));
 	}
 
+	@Test
+	void deveCriarNotaMenorOuIgualDez() {
+		// cenário
+		Nota nota = new Nota();
+
+		// ação
+		nota.setNota1(5.0);
+		nota.setNota2(6.0);
+		nota.setNota3(7.0);
+
+		// validação
+		assertThat(nota.nota1, lessThanOrEqualTo(10.0));
+		assertThat(nota.nota2, lessThanOrEqualTo(10.0));
+		assertThat(nota.nota3, lessThanOrEqualTo(10.0));
+	}
+
 }
