@@ -26,7 +26,7 @@ class TestesAppApplicationTests {
 		double media = nota.calculaMedia();
 
 		// validação
-		Assertions.assertEquals(6.3, nota.calculaMedia());
+		Assertions.assertEquals(6.3, media, 0.01);
 
 	}
 
@@ -42,7 +42,7 @@ class TestesAppApplicationTests {
 		double media = nota.calculaMedia();
 
 		// validação
-		Assertions.assertEquals(9.0, nota.calculaMedia());
+		Assertions.assertEquals(9.0, media, 0.01);
 	}
 
 	@Test
@@ -57,7 +57,7 @@ class TestesAppApplicationTests {
 		double media = nota.calculaMedia();
 
 		// validação
-		Assertions.assertEquals(7.5, nota.calculaMedia());
+		Assertions.assertEquals(7.5, media, 0.01);
 	}
 
 	@Test
